@@ -1,1 +1,72 @@
 @import 'partials/variables';
+@import 'partials/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $background-body-dark;
+    color: $text-primary-dark;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid red;
+
+    .top-banner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-container, .card {
+        background-color: $background-card-dark;
+        margin: 10px 0;
+    }
+
+    .card {
+        display: flex;
+        
+        .card-left {
+            // flex-basis:100%; //do i need it
+            img {
+                border-radius: 50%;
+            }
+        }
+        
+        .card-right {
+            flex-basis:100%;
+            .card-body {
+                border: 1px solid orange;
+    
+                .name-date {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex: 1;
+                }
+    
+            }
+
+            .numbers-container {
+                display: flex;
+                background-color:$background-body-dark;
+
+                .number-item {
+                    flex:1;
+
+                    span {
+                        display: block;
+                    }
+                }
+            }
+
+            .contact-container {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+}

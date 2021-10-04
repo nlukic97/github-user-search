@@ -18,7 +18,7 @@
 
     <!-- Top banner -->
     <section class="top-banner">
-      <div id="logo"></div>
+      <div id="logo">devfinder</div>
       <div>
         <button>Dark <i>icon</i></button>
         <button>Light <i>icon</i></button>
@@ -28,48 +28,52 @@
     <!-- Search bar -->
     <section class="search-container">
       <i>SearchIcon</i>
-      <input type="text" id="search" name="search">
-      <button>Search</button>
+      <input type="text" id="username" name="username" placeholder='Search GitHub username...'>
+      <button id="search-btn">Search</button>
     </section>
 
     <!-- Card -->
     <section class="card">
-      <div class="card-header">
+      <div class="card-left">
         <img src="../preview.jpg" width="150" height="150" alt="">
       </div>
-      <div class="card-body">
-        <h1>The Octocat</h1>
-        <span>Joined
-          <span class='join-date'>25 Jan 2011</span>
-        </span>
-        <h4 id="username">@octocat</h4>
-        <p class="bio">This profile has no bio</p>
-      </div>
 
-      <!-- User numbers container -->
-      <div class="numbers-container">
-        <div class="repos">
-          <span id="title">Repos</span>
-          <span id="number">8</span>
+      <div class="card-right">
+        <div class="card-body">
+          <div class="name-date">
+            <h1>The Octocat</h1>
+            <span class='join-date'>25 Jan 2011</span>
+          </div>
+  
+          <h4 id="username">@octocat</h4>
+          <p class="bio">This profile has no bio</p>
         </div>
-
-        <div class="followers">
-          <span id="title">Followers</span>
-          <span id="number">3938</span>
+  
+        <!-- User numbers container -->
+        <div class="numbers-container">
+          <div class="number-item">
+            <span id="title">Repos</span>
+            <span id="number">8</span>
+          </div>
+  
+          <div class="number-item">
+            <span id="title">Followers</span>
+            <span id="number">3938</span>
+          </div>
+  
+          <div class="number-item">
+            <span id="title">Following</span>
+            <span id="number">9</span>
+          </div>
         </div>
-
-        <div class="following">
-          <span id="title">Following</span>
-          <span id="number">9</span>
+  
+        <!-- Contant -->
+        <div class="contact-container">
+          <div class="location"><i>icon</i>San Francisco</div>
+          <div class="twitter"><i>icon</i>Not Available</div>
+          <div class="url"><i>icon</i>Url link</div>
+          <div class="last"><i>icon</i>last one</div> <!-- not sure what this is-->
         </div>
-      </div>
-
-      <!-- Contant -->
-      <div class="contact-container">
-        <div class="location"><i>icon</i>San Francisco</div>
-        <div class="twitter"><i>icon</i>Not Available</div>
-        <div class="url"><i>icon</i>San Francisco</div>
-        <div class="last"><i>icon</i>San Francisco</div> <!-- not sure what this is-->
       </div>
 
     </section>

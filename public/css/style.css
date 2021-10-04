@@ -1,3 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  background-color: #141D2F;
+  color: #fff;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.container .top-banner {
+  display: flex;
+  justify-content: space-between;
+}
+.container .search-container, .container .card {
+  background-color: #1E2A47;
+  margin: 10px 0;
+}
+.container .card {
+  display: flex;
+}
+.container .card .card-left img {
+  border-radius: 50%;
+}
+.container .card .card-right {
+  flex-basis: 100%;
+}
+.container .card .card-right .card-body {
+  border: 1px solid orange;
+}
+.container .card .card-right .card-body .name-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+.container .card .card-right .numbers-container {
+  display: flex;
+  background-color: #141D2F;
+}
+.container .card .card-right .numbers-container .number-item {
+  flex: 1;
+}
+.container .card .card-right .numbers-container .number-item span {
+  display: block;
+}
+.container .card .card-right .contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
 /*# sourceMappingURL=style.css.map */
