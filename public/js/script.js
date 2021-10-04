@@ -17,25 +17,26 @@ async function queryUser(username){
     var fullDate = new Date(created_at)
     let stringDate = `${fullDate.getDate()} ${fullDate.toLocaleDateString('default',{month:'short'})} ${fullDate.getFullYear()}`;
     console.log(stringDate);
-    updateElement('#join-date',(stringDate)? stringDate : 'Unknown');
     
-
+    
     document.querySelector('#avatar').src = (avatar)? avatar : '';
-    
-    updateElement('#name',(name)? name : 'Unknown');
-    updateElement('#login',(name)? '@'+login : 'Unknown');
-    updateElement('#bio',(bio)? bio : 'This profile has no bio');
 
+    updateElement('#name',(name)? name : 'Unknown');
+    updateElement('#login',(login)? '@'+login : 'Unknown');
+    
+    updateElement('#join-date',(stringDate)? stringDate : 'Unknown');
+    updateElement('#bio',(bio)? bio : 'This profile has no bio');
     updateElement('#repos-number',(repos)? repos : '');
+
     updateElement('#followers-number',(followers)? followers : '');
     updateElement('#following-number',(following)? following : '');
-    
+
     updateElement('#location',(location)? location : 'Not available');
     updateElement('#twitter',(twitter)? twitter : 'Not Available');
     updateElement('#blog',(blog)? blog : 'Not Available');
-
-
     updateElement('#company',(company)? company : 'Not Available');
+
+
 
 
 
