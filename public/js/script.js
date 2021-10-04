@@ -16,13 +16,13 @@ async function queryUser(username){
     // console.log(created_at);
     var fullDate = new Date(created_at)
     let stringDate = `${fullDate.getDate()} ${fullDate.toLocaleDateString('default',{month:'short'})} ${fullDate.getFullYear()}`;
+    console.log(stringDate);
     updateElement('#join-date',(stringDate)? stringDate : 'Unknown');
     
 
     document.querySelector('#avatar').src = (avatar)? avatar : '';
     
     updateElement('#name',(name)? name : 'Unknown');
-    updateElement('#join-date',(created_at)? created_at : 'N/A');
     updateElement('#login',(name)? '@'+login : 'Unknown');
     updateElement('#bio',(bio)? bio : 'This profile has no bio');
 

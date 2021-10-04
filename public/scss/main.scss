@@ -38,6 +38,7 @@ body {
         
         .card-right {
             flex-basis:100%;
+
             .card-body {
                 border: 1px solid orange;
     
@@ -66,6 +67,10 @@ body {
             .contact-container {
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
+
+                .location-icon::before {
+                    content:''
+                }
             }
         }
     }
