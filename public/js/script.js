@@ -33,6 +33,8 @@ async function queryUser(username){
     updateElement('#location',(location)? location : 'Not available');
     updateElement('#twitter',(twitter)? twitter : 'Not Available');
     updateElement('#blog',(blog)? blog : 'Not Available');
+
+
     updateElement('#company',(company)? company : 'Not Available');
 
 
