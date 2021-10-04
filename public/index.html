@@ -4,23 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <title></title>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- JavaScript -->
+  <script src="js/script.js" defer></script>
+  
+  <title>Zadatak 4 | Nikola Lukic</title>
 </head>
 <body>
+  <div class="container">
 
-  devfinder
+    <!-- Top banner -->
+    <section>
+      <div id="logo"></div>
+      <div>
+        <button>Dark <i>icon</i></button>
+        <button>Light <i>icon</i></button>
+      </div>
+    </section>
 
-  Light
-  Dark
+    <!-- Search bar -->
 
-  Search GitHub username...
-  Search
+    <!-- Card -->
+    <section class="card">
+      <div class="card-header">
+        <img src="../preview.jpg" width="150" height="150" alt="">
+      </div>
+      <div class="card-body">
+        <h1>The Octocat</h1>
+        <span>Joined
+          <span class='join-date'>25 Jan 2011</span>
+        </span>
+        <h4 id="username">@octocat</h4>
+        <p class="bio">This profile has no bio</p>
+      </div>
 
-  Joined
+      <!-- User numbers container -->
+      <div class="numbers-container">
+        <div class="repos">
+          <span id="title">Repos</span>
+          <span id="number">8</span>
+        </div>
 
-  Repos
-  Followers
-  Following
+        <div class="followers">
+          <span id="title">Followers</span>
+          <span id="number">3938</span>
+        </div>
 
+        <div class="following">
+          <span id="title">Following</span>
+          <span id="number">9</span>
+        </div>
+      </div>
+
+      <!-- Contant -->
+      <div class="contact-container">
+        <div class="location"></div>
+        <div class="twitter"></div>
+        <div class="url"></div>
+        <div class="last"></div> <!-- not sure what this is-->
+      </div>
+    </section>
+  </div>
+  
 </body>
 </html>
