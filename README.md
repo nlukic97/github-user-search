@@ -1,7 +1,7 @@
 # Zadatak 4 - Nikola Lukic
 
 ## Production url:
-- still to be added
+- https://zadatak-4-xi.vercel.app/
 
 ---
 
@@ -15,6 +15,6 @@ From there, open the following file:
 
 ---
 ## Instalation for development
-- For development, repeat the previously discussed instalation steps, and run the following command:
-        
+For development, repeat the previously discussed instalation steps, and run the following command:
+
         npm run compile:sass

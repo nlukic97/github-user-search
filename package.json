@@ -1,0 +1,23 @@
+{
+  "name": "zadatak_4",
+  "version": "1.0.0",
+  "description": "- https://zadatak-4-xi.vercel.app/",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass public/scss/main.scss public/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nlukic97/zadatak_4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nlukic97/zadatak_4/issues"
+  },
+  "homepage": "https://github.com/nlukic97/zadatak_4#readme",
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
+}
