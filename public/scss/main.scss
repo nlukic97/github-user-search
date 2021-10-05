@@ -7,14 +7,14 @@
 }
 
 body {
-    background-color: $background-body-dark;
-    color: $text-primary-dark;
+    background-color: var(--background-body-dark);
+    color: var(--text-primary-dark);
 }
 
 .container {
     width: 50%;
     margin: 0 auto;
-    border: 1px solid red;
+    // border: 1px solid red;
 
     .top-banner {
         display: flex;
@@ -22,7 +22,7 @@ body {
     }
 
     .search-container, .card {
-        background-color: $background-card-dark;
+        background-color: var(--background-card-dark);
         margin: 10px 0;
     }
 
@@ -40,7 +40,7 @@ body {
             flex-basis:100%;
 
             .card-body {
-                border: 1px solid orange;
+                // border: 1px solid orange;
     
                 .name-date {
                     display: flex;
@@ -53,7 +53,7 @@ body {
 
             .numbers-container {
                 display: flex;
-                background-color:$background-body-dark;
+                background-color:var(--background-body-dark);
 
                 .number-item {
                     flex:1;
@@ -68,8 +68,25 @@ body {
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
 
-                .location-icon {
-                    // filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);;
+                .location-container, .twitter-container, .blog-container, .company-container {
+
+                    .error-message {
+                        display: none;
+                    }
+
+                    &.unavailable { //This will hide the link and show the error message instead
+                        opacity: 0.6;
+                        a {
+                            display: none;
+                        }
+                        .error-message {
+                            display: inline;
+                        }
+                    }
+
+                    .location-icon {
+                        // filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);;
+                    }
                 }
 
                 .twitter-icon {
@@ -85,5 +102,14 @@ body {
                 }
             }
         }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+        text-decoration: underline;
     }
 }
