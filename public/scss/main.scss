@@ -7,6 +7,8 @@
 }
 
 body {
+    background-color: whitesmoke; //add light color
+    color:black;
     &.dark {
         background-color: var(--background-body-dark);
         color: var(--text-primary-dark);
@@ -25,25 +27,6 @@ body {
             }
         }
     }
-
-    &.light {
-        // background-color: var(--background-body-dark);
-        // color: var(--text-primary-dark);
-
-        .container {
-            .search-container, .card {
-                // background-color: var(--background-card-dark);
-            }
-
-            .card {
-                .card-right {
-                    .numbers-container {
-                        // background-color:var(--background-body-dark);
-                    }
-                }
-            }
-        }
-    }
 }
 
 .container {
@@ -57,7 +40,7 @@ body {
     }
 
     .search-container, .card {
-        
+        background-color: orange; //add light default
         margin: 10px 0;
     }
 
@@ -120,6 +103,7 @@ body {
 
             .numbers-container {
                 display: flex;
+                background-color:magenta; //add light default
 
                 .number-item {
                     flex:1;

@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+body {
+  background-color: whitesmoke;
+  color: black;
+}
 body.dark {
   background-color: var(--background-body-dark);
   color: var(--text-primary-dark);
@@ -19,6 +23,7 @@ body.dark .container .search-container, body.dark .container .card {
 body.dark .container .card .card-right .numbers-container {
   background-color: var(--background-body-dark);
 }
+
 .container {
   width: 50%;
   margin: 0 auto;
@@ -28,6 +33,7 @@ body.dark .container .card .card-right .numbers-container {
   justify-content: space-between;
 }
 .container .search-container, .container .card {
+  background-color: orange;
   margin: 10px 0;
 }
 .container .search-container {
@@ -66,6 +72,7 @@ body.dark .container .card .card-right .numbers-container {
 }
 .container .card .card-right .numbers-container {
   display: flex;
+  background-color: magenta;
 }
 .container .card .card-right .numbers-container .number-item {
   flex: 1;
