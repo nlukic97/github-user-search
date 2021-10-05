@@ -8,16 +8,29 @@ async function queryUser(){
 
     let apiReq = 'https://api.github.com/users/' + username
 
-    // let data = 
+    let data = await fetch(apiReq)
+        .then(response => (response.status != 200) ? false : response.json())
+        // .then(res=> res); //maybe don't need this
+
+    if(data === false) return //If the api does not return a status of 200, end code execution from this line
+    
     let {
-            avatar_url:avatar, name, login, html_url:url,
-            created_at, bio, public_repos: repos, 
-            followers, following, twitter_username: twitter, 
-            blog, location, company
-        } =
-    await fetch(apiReq).then(response => response.json()).then(res=> {
-        return res
-    });
+        avatar_url:avatar, 
+        name, 
+        login, 
+        html_url:url,
+        created_at, 
+        bio, 
+        public_repos: repos, 
+        followers, 
+        following, 
+        twitter_username: twitter, 
+        blog, 
+        location, 
+        company
+    } 
+    = data;
+    
 
     //remove classes that decreas the text opacity for previous results that were not available
     document.querySelectorAll('.unavailable').forEach(e=>{
