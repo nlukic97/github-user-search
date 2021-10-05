@@ -41,6 +41,15 @@ body {
   align-items: center;
   flex: 1;
 }
+.container .card .card-right .card-body .login-container .error-message {
+  display: none;
+}
+.container .card .card-right .card-body .login-container.unavailable a {
+  display: none;
+}
+.container .card .card-right .card-body .login-container.unavailable .error-message {
+  display: block;
+}
 .container .card .card-right .numbers-container {
   display: flex;
   background-color: var(--background-body-dark);

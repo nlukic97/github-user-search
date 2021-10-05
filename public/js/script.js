@@ -23,8 +23,8 @@ async function queryUser(username){
 
     //name, login, join-date, and bio
     updateElementAttr('#name','innerText',(name)? name : 'Unknown');
-    updateElementAttr('#login','innerText',(login)? '@'+login : 'Unknown');
-    updateElementAttr('#login','href',(url)? url : 'Unknown'); //hide the link
+    updateElementAttr('#login','href',(url)? url : ''); //hide the link
+    updateElementAttr('#login','innerText',(login)? '@'+login : updateClass('.login-container','add'));
     
     updateElementAttr('#join-date','innerText',(created_at)? getJoinDate(created_at) : 'Unknown');
     updateElementAttr('#bio','innerText',(bio)? bio : 'This profile has no bio');

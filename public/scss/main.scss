@@ -48,6 +48,22 @@ body {
                     align-items: center;
                     flex: 1;
                 }
+
+                .login-container {
+                    .error-message {
+                        display: none;
+                    }
+
+                    &.unavailable {
+                        a {
+                            display: none;
+                        }
+
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
     
             }
 
