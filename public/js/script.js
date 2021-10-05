@@ -1,5 +1,11 @@
-async function queryUser(username){
+async function queryUser(){
+    let username = document.getElementById('username').value
+
+    if(username == '' || username == null){
+        return;
+    }
     
+
     let apiReq = 'https://api.github.com/users/' + username
 
     // let data = 
@@ -40,16 +46,11 @@ async function queryUser(username){
     updateElementAttr('#twitter','href',(twitter)? 'https://twitter.com/'+ twitter : '');
     updateElementAttr('#twitter','innerText',(twitter)? twitter : updateClass('.twitter-container','add'));
 
-    updateElementAttr('#blog','href',(blog)? blog : '');
+    updateElementAttr('#blog','href',(blog)? createWebAddress(blog) : '');
     updateElementAttr('#blog','innerText',(blog)? blog : updateClass('.blog-container','add'));
 
     updateElementAttr('#company','innerText',(company)? company : updateClass('.company-container','add'));
 }
-
-document.getElementById('search-btn').addEventListener('click',function(){
-    let username = document.getElementById('username').value
-    if(username != '' && username != null) queryUser(username)
-})
 
 function getJoinDate(created_at){
     var fullDate = new Date(created_at)
@@ -65,4 +66,22 @@ function updateClass(querySelector,action){
     return "Not available";
 }
 
-queryUser('octocat')
+
+/** Some users add 'https://' with their blog url (github.com/daniel), and some don't (github.com/bradtraversy)
+    (which would change the anchor tag href to '/public/[their_blog_url])' 
+    causing an error - this method solves this problem.*/
+function createWebAddress(data){
+    console.log(data);
+    if(data.includes('https://') || data.includes('http://')){
+        return data
+    } else {
+        return `https://${data}`
+    }
+}
+
+// bootstraping
+document.getElementById('search-btn').addEventListener('click',queryUser)
+
+document.getElementById('username').addEventListener('keypress',e=>{
+    if(e.key === 'Enter') queryUser();
+})

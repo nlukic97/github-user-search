@@ -26,6 +26,18 @@ body {
         margin: 10px 0;
     }
 
+    .search-container {
+        #search-icon {
+            // display: subgrid;
+        }
+
+        input {
+            // display: inline-block;
+            height: 100%;
+            padding: 1rem 0;
+        }
+    }
+
     .card {
         display: flex;
         

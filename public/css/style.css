@@ -26,6 +26,10 @@ body {
   background-color: var(--background-card-dark);
   margin: 10px 0;
 }
+.container .search-container input {
+  height: 100%;
+  padding: 1rem 0;
+}
 .container .card {
   display: flex;
 }
