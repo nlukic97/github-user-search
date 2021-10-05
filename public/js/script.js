@@ -1,14 +1,10 @@
 async function queryUser(){
     let username = document.getElementById('username').value
-
     if(username == '' || username == null){
-        return;
-    }
-    
+        return; //if the input has no text, method stops executing
+    } 
 
-    let apiReq = 'https://api.github.com/users/' + username
-
-    let data = await fetch(apiReq)
+    let data = await fetch('https://api.github.com/users/' + username)
         .then(response => (response.status != 200) ? false : response.json())
         // .then(res=> res); //maybe don't need this
 
@@ -30,6 +26,8 @@ async function queryUser(){
         company
     } 
     = data;
+
+    delete data; //unsetting the data, since I do not need it.
     
 
     //remove classes that decreas the text opacity for previous results that were not available
@@ -71,7 +69,7 @@ function getJoinDate(created_at){
 }
 
 function updateElementAttr(querySelector, attribute, value){
-    document.querySelector(querySelector)[attribute] = value
+    document.querySelector(querySelector)[attribute] = value //example: item.href=value or item.innerText = value
 }
 
 function updateClass(querySelector,action){
@@ -92,7 +90,7 @@ function createWebAddress(data){
     }
 }
 
-// bootstraping
+// bootstraping click and keypress listeners
 document.getElementById('search-btn').addEventListener('click',queryUser)
 
 document.getElementById('username').addEventListener('keypress',e=>{
