@@ -142,19 +142,20 @@ body {
         border-radius: 10px;
         padding: 45px 48px;
         
+        // ----------  Left side of the card ---------- 
         .card-left {
-            // border: 1px solid orange;
             flex: 1;
             width: 117px;
             #avatar {
-                // width: 100%;
-                
+                width: 100%;                
             }
             img {
                 border-radius: 50%;
             }
         }
         
+
+        // ---------- right side of the card ---------- 
         .card-right {
 
             .card-body {    
