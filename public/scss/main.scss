@@ -170,7 +170,11 @@ body {
 
                 #bio {
                     font-size: 15px;
-                    color: orange;
+                    color: #4B6A9B;
+
+                    &.unavailable {
+                        opacity: 0.75;
+                    }
                 }
     
             }

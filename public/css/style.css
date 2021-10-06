@@ -30,6 +30,9 @@ body.dark .container .search-container input {
 body.dark .container .card .card-right .card-body .name-date #join-date {
   color: #fff;
 }
+body.dark .container .card .card-right .card-body #bio {
+  color: #fff;
+}
 body.dark .container .card .card-right .numbers-container {
   background-color: var(--background-body-dark);
 }
@@ -172,7 +175,10 @@ body {
 }
 .container .card .card-right .card-body #bio {
   font-size: 15px;
-  color: orange;
+  color: #4B6A9B;
+}
+.container .card .card-right .card-body #bio.unavailable {
+  opacity: 0.75;
 }
 .container .card .card-right .numbers-container {
   display: flex;
