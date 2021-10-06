@@ -41,10 +41,11 @@ async function queryUser(username){
     //name, login, join-date, and bio
     updateElementAttr('#name','innerText',(name)? name : 'Unknown');
     updateElementAttr('#login','href',(url)? url : ''); //hide the link
-    updateElementAttr('#login','innerText',(login)? '@'+login : updateClass('.login-container','add'));
+    updateElementAttr('#login','innerText',(login)? '@'+login : updateClass('.login-container','add','Not available'));
     
     updateElementAttr('#join-date','innerText',(created_at)? 'Joined ' + getJoinDate(created_at) : 'Unknown');
-    updateElementAttr('#bio','innerText',(bio)? bio : 'This profile has no bio');
+    // updateElementAttr('#bio','innerText',(bio)? bio : 'This profile has no bio');
+    updateElementAttr('#bio','innerText',(bio)? bio : updateClass('#bio','add','This profile has no bio'));
 
     // repos, following, and followers
     updateElementAttr('#repos-number','innerText',(repos)? repos : '');
@@ -52,15 +53,15 @@ async function queryUser(username){
     updateElementAttr('#following-number','innerText',(following)? following : '');
 
     // location, twitter, blog, and company
-    updateElementAttr('#location','innerText',(location)? location : updateClass('.location-container','add'));
+    updateElementAttr('#location','innerText',(location)? location : updateClass('.location-container','add','Not available'));
 
     updateElementAttr('#twitter','href',(twitter)? 'https://twitter.com/'+ twitter : '');
-    updateElementAttr('#twitter','innerText',(twitter)? twitter : updateClass('.twitter-container','add'));
+    updateElementAttr('#twitter','innerText',(twitter)? twitter : updateClass('.twitter-container','add','Not available'));
 
     updateElementAttr('#blog','href',(blog)? createWebAddress(blog) : '');
-    updateElementAttr('#blog','innerText',(blog)? blog : updateClass('.blog-container','add'));
+    updateElementAttr('#blog','innerText',(blog)? blog : updateClass('.blog-container','add','Not available'));
 
-    updateElementAttr('#company','innerText',(company)? company : updateClass('.company-container','add'));
+    updateElementAttr('#company','innerText',(company)? company : updateClass('.company-container','add','Not available'));
 }
 
 function getJoinDate(created_at){
@@ -72,9 +73,9 @@ function updateElementAttr(querySelector, attribute, value){
     document.querySelector(querySelector)[attribute] = value //example: item.href=value or item.innerText = value
 }
 
-function updateClass(querySelector,action){
+function updateClass(querySelector,action, returnMessage){
     document.querySelector(querySelector).classList[action]('unavailable'); //adding this class will toggle the visibility of the a tag and the span tag containing the error message
-    return "Not available";
+    return returnMessage;
 }
 
 
