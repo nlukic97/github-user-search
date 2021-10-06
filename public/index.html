@@ -57,24 +57,31 @@
 
     <!-- Card -->
     <section class="card boxshadow">
-      <div class="card-left">
-        <img src="../preview.jpg" width="150" height="150" alt="" id="avatar">
-      </div>
 
-      <div class="card-right">
-        <div class="card-body">
-          <div class="name-date">
-            <h1 id="name">The Octocat</h1>
+        <div class="first-section">
+          <img src="../preview.jpg" width="150" height="150" alt="" id="avatar">
+          
+          <div class="card-body">
+            <div class="basic-info">
+              <h1 id="name">The Octocat</h1>
+
+              <!-- username display -->
+              <div class="login-container">
+                <a href="" id="login" target="blank"></a>
+                <span class="error-message">Not available</span>
+              </div>
+            </div>
+
+            <!-- join-date display -->
             <span id='join-date'>Joined 25 Jan 2011</span>
           </div>
-  
-          <div class="login-container">
-            <a href="" id="login" target="blank"></a>
-            <span class="error-message">Not available</span>
-          </div>
-          <p id="bio">This profile has no bio</p>
+
         </div>
-  
+
+
+      <div class="second-content">
+        <p id="bio">This profile has no bio</p>
+        
         <!-- User numbers container -->
         <div class="numbers-container">
           <div class="number-item">

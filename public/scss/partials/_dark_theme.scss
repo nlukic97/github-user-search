@@ -2,16 +2,16 @@ body {
     &.dark {
         background-color: var(--background-body-dark);
         color: var(--text-primary-dark);
-
+        
         .boxshadow {
             // filter: drop-shadow(0px 30px 15px rgba(70, 96, 187,19%));
             box-shadow: none;
         }
-
+        
         a {
             color:#fff;
         }
-
+        
         .container {
             .top-banner .button-box #theme-btn {        
                 #theme-label {    
@@ -20,57 +20,59 @@ body {
                         content:'Light';
                     }
                 }
-
+                
                 #moon-icon {
                     display: none;
                 }
-
+                
                 #light-bulb-icon {
                     display: block;
                 }
             }
-
+            
             
             .search-container, .card {
                 background-color: var(--background-card-dark);
             }
-
+            
             .search-container {
                 input {
                     color: #fff;
                 }
             }
-
+            
             .card {
-                .card-right {
-                    .card-body {
-                        .name-date {
-                            #name {
-                                color:#fff;
-                            }
-                            #join-date {
-                                color: #fff;
-                            }
-                        }
-
-                        #bio {
-                            color: #fff;
+                .card-body {
+                    .basic-info {
+                        #name {
+                            color:#fff;
                         }
                     }
+                    
+                    #join-date {
+                        color: #fff;
+                    }
+                }                
+                .second-content {
+                    #bio {
+                        color: #fff;
+                    }
+
                     .numbers-container {
                         background-color:var(--background-body-dark);
-
+                        
                         .number-item {
                             .title {
                                 color: #fff;
                             }
-        
+                            
                             .number {
                                 color: #fff;        
                             }
                         }
                     }
                 }
+                
             }
         }
     }
