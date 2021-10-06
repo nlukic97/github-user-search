@@ -2,62 +2,15 @@
   font-size: 16px;
 }
 
-body.dark {
-  background-color: var(--background-body-dark);
-  color: var(--text-primary-dark);
-}
-body.dark .boxshadow {
-  box-shadow: none;
-}
-body.dark a {
-  color: #fff;
-}
-body.dark .container .top-banner .button-box #theme-btn #theme-label {
-  color: #fff;
-}
-body.dark .container .top-banner .button-box #theme-btn #theme-label::before {
-  content: "Light";
-}
-body.dark .container .top-banner .button-box #theme-btn #moon-icon {
-  display: none;
-}
-body.dark .container .top-banner .button-box #theme-btn #light-bulb-icon {
-  display: block;
-}
-body.dark .container .search-container, body.dark .container .card {
-  background-color: var(--background-card-dark);
-}
-body.dark .container .search-container input {
-  color: #fff;
-}
-body.dark .container .card .card-body .basic-info #name {
-  color: #fff;
-}
-body.dark .container .card .card-body #join-date {
-  color: #fff;
-}
-body.dark .container .card .second-content #bio {
-  color: #fff;
-}
-body.dark .container .card .second-content .numbers-container {
-  background-color: var(--background-body-dark);
-}
-body.dark .container .card .second-content .numbers-container .number-item .title {
-  color: #fff;
-}
-body.dark .container .card .second-content .numbers-container .number-item .number {
-  color: #fff;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 :root {
   --background-body-dark: #141D2F;
   --background-card-dark: #1E2A47;
   --text-primary-dark:#fff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -172,18 +125,22 @@ body .boxshadow {
 }
 .container .card .first-section #avatar {
   border-radius: 50%;
-  width: 20%;
-  height: auto;
+  width: 117px;
+  height: 117px;
+  margin-right: 35px;
 }
 .container .card .first-section .card-body {
   width: 80%;
-  padding-left: 37px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
+.container .card .first-section .card-body .basic-info {
+  flex: 1;
+}
 .container .card .first-section .card-body .basic-info #name {
   color: #2B3442;
+  padding-right: 20px;
 }
 .container .card .first-section .card-body .basic-info .login-container #login {
   color: #0079FF;
@@ -199,13 +156,13 @@ body .boxshadow {
   display: block;
 }
 .container .card .first-section .card-body #join-date {
+  flex: 1;
   color: #697C9A;
   font-size: 15px;
   line-height: 36px;
 }
 .container .card .second-content {
-  margin-left: 20%;
-  padding-left: 37px;
+  margin-left: calc(20% + 35px);
 }
 .container .card .second-content #bio {
   font-size: 15px;
@@ -253,6 +210,70 @@ body .boxshadow {
 }
 .container .card .second-content .contact-container .location-container.unavailable .error-message, .container .card .second-content .contact-container .twitter-container.unavailable .error-message, .container .card .second-content .contact-container .blog-container.unavailable .error-message, .container .card .second-content .contact-container .company-container.unavailable .error-message {
   display: inline;
+}
+
+body.dark {
+  background-color: var(--background-body-dark);
+  color: var(--text-primary-dark);
+}
+body.dark .boxshadow {
+  box-shadow: none;
+}
+body.dark a {
+  color: #fff;
+}
+body.dark .container .top-banner .button-box #theme-btn #theme-label {
+  color: #fff;
+}
+body.dark .container .top-banner .button-box #theme-btn #theme-label::before {
+  content: "Light";
+}
+body.dark .container .top-banner .button-box #theme-btn #moon-icon {
+  display: none;
+}
+body.dark .container .top-banner .button-box #theme-btn #light-bulb-icon {
+  display: block;
+}
+body.dark .container .search-container, body.dark .container .card {
+  background-color: var(--background-card-dark);
+}
+body.dark .container .search-container input {
+  color: #fff;
+}
+body.dark .container .card .card-body .basic-info #name {
+  color: #fff;
+}
+body.dark .container .card .card-body #join-date {
+  color: #fff;
+}
+body.dark .container .card .second-content #bio {
+  color: #fff;
+}
+body.dark .container .card .second-content .numbers-container {
+  background-color: var(--background-body-dark);
+}
+body.dark .container .card .second-content .numbers-container .number-item .title {
+  color: #fff;
+}
+body.dark .container .card .second-content .numbers-container .number-item .number {
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .container .card .first-section .card-body {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .container .card .second-content {
+    margin-left: unset;
+    padding-left: unset;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container .card .first-section #avatar {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

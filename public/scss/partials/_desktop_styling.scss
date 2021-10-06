@@ -1,0 +1,253 @@
+body {
+  background-color: #F6F8FF; //add light color
+  color:black;
+  font-family: 'Space Mono', monospace;
+  
+  .boxshadow {
+      // filter: drop-shadow(0px 30px 15px rgba(70, 96, 187,19%));
+      box-shadow: 0px 16px 30px -10px rgba(70, 96, 187,.2)
+  }
+}
+
+.container {
+  max-width: 730px;
+  width: 70%;
+  margin: 0 auto;
+  // border: 1px solid red;
+  
+  a {
+      text-decoration: none;
+      color: #000;
+      
+      &:hover {
+          text-decoration: underline;
+      }
+  }
+  
+  .top-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      
+      #logo {
+          font-size: 26px;
+      }
+      
+      .button-box {
+          #theme-btn {
+              color:#697C9A;
+              font-family: 'Space Mono', monospace;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 78px;
+              background: none;
+              border: none;
+              &:hover {
+                  cursor: pointer;
+              }
+              
+              #theme-label {
+                  text-transform: uppercase;
+                  padding-left: 2px;
+                  font-weight: 700;
+                  letter-spacing: 2.5px;
+                  font-size: 13px;
+                  &::before{
+                      content:'Dark';
+                  }
+              }
+              
+              #moon-icon {
+                  display: block;
+              }
+              
+              #light-bulb-icon {
+                  display: none;
+              }
+          }
+      }
+  }
+  
+  .search-container, .card {
+      background-color: #FEFEFE; //add light default
+      margin: 10px 0;
+  }
+  
+  .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      
+      input {
+          flex:1;
+          font-family: 'Space Mono', monospace;
+          font-size: 18px;
+          background: url('../assets/icon-search.svg') no-repeat center left 32px/contain;
+          background-size: 21px 21px;
+          padding: 0.5rem 0.5rem 0.5rem 77px;
+          border: none;
+          color:#222731;
+          line-height: 25px;
+          outline: none;
+          
+          &::placeholder,
+          &::-webkit-input-placeholder {
+              font-weight: 700;
+              border: none;
+              color:#4B6A9B;
+          }
+          
+          &:focus {
+              border: none;
+          }
+      }
+      
+      #search-btn {
+          font-family: 'Space Mono', monospace;
+          font-size: 16px;
+          box-sizing: border-box;
+          background-color: #0079FF;
+          border: none;
+          border-radius: 10px;
+          padding: 13px 24px;
+          color: #fff;
+      }
+  }
+  
+  .card {
+      border-radius: 10px;
+      padding: 45px 48px;
+      
+      .first-section {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          
+          #avatar {
+              border-radius: 50%;
+              width: 117px;
+              height: 117px;
+              margin-right: 35px;
+          }
+          
+          .card-body {  
+              width: 80%;
+              // margin-left: 35px;
+              
+              display: flex; //toggle this to change location of join-date, make it to 'block'
+              justify-content: space-between;
+              align-items: flex-start;
+              
+              .basic-info {
+                  flex: 1;
+                  
+                  #name {
+                      color:#2B3442;
+                      padding-right: 20px;
+                  }
+                  
+                  .login-container {
+                      #login {
+                          color: #0079FF;
+                          font-size: 16px;
+                      }
+                      .error-message {
+                          display: none;
+                      }
+                      
+                      &.unavailable {
+                          a {
+                              display: none;
+                          }
+                          
+                          .error-message {
+                              display: block;
+                          }
+                      }
+                  }
+              }
+              
+              #join-date {
+                  flex: 1;
+                  color: #697C9A;
+                  font-size: 15px;
+                  line-height: 36px; //So that the name and the join date are lined up together
+              }
+              
+          }
+          
+          
+      }
+      
+      
+      
+      // ---------- 2nd content ---------- 
+      .second-content {
+          margin-left: calc(20% + 35px); //problematic
+          // padding-left: 35px;  
+          
+          #bio {
+              font-size: 15px;
+              color: #4B6A9B;
+              
+              &.unavailable {
+                  opacity: 0.75;
+              }
+          }
+          
+          .numbers-container {
+              display: flex;
+              background-color:#F6F8FF; //add light default
+              border-radius: 10px;
+              padding: 15px 30px;
+              margin: 30px 0;
+              
+              .number-item {
+                  flex:1;
+                  .title, .number {
+                      display: block;
+                  }
+                  
+                  .title {
+                      color: #4B6A9B;
+                      font-size: 13px;
+                  }
+                  
+                  .number {
+                      color: #2B3442;
+                      font-size: 22px;
+                      font-weight: 700;
+                      
+                  }
+              }
+          }
+          
+          .contact-container {
+              display: grid;
+              gap: 20px;
+              grid-template-columns: repeat(2,1fr);
+              font-size: 15px;
+              .location-container, .twitter-container, .blog-container, .company-container {
+                  .error-message {
+                      display: none;
+                  }
+                  
+                  &.unavailable { //This will hide the link and show the error message instead
+                      opacity: 0.6;
+                      a {
+                          display: none;
+                      }
+                      .error-message {
+                          display: inline;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

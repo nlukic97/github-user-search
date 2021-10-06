@@ -27,9 +27,6 @@ async function queryUser(username){
     } 
     = data;
 
-    delete data; //unsetting the data, since I do not need it.
-    
-
     //remove classes that decreas the text opacity for previous results that were not available
     document.querySelectorAll('.unavailable').forEach(e=>{
         e.classList.remove('unavailable')
@@ -47,10 +44,10 @@ async function queryUser(username){
     // updateElementAttr('#bio','innerText',(bio)? bio : 'This profile has no bio');
     updateElementAttr('#bio','innerText',(bio)? bio : updateClass('#bio','add','This profile has no bio'));
 
-    // repos, following, and followers
-    updateElementAttr('#repos-number','innerText',(repos)? repos : '');
-    updateElementAttr('#followers-number','innerText',(followers)? followers : '');
-    updateElementAttr('#following-number','innerText',(following)? following : '');
+    // repos, following, and followers - differing conditional statement due to the fact that 0 repos, followers, and following cause the condition to return to false, which is not the case
+    updateElementAttr('#repos-number','innerText',(repos !== null && followers != undefined)? repos : ''); 
+    updateElementAttr('#followers-number','innerText',(followers !== null && followers != undefined)? followers : '');
+    updateElementAttr('#following-number','innerText',(following !== null && followers != undefined)? following : '');
 
     // location, twitter, blog, and company
     updateElementAttr('#location','innerText',(location)? location : updateClass('.location-container','add','Not available'));

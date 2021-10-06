@@ -1,0 +1,31 @@
+@media screen and (max-width:900px) {
+  .container {
+    .card {
+      .first-section {
+        .card-body {
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+      }
+
+      .second-content {
+        margin-left: unset;
+        padding-left: unset;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:600px) {
+  .container {
+    .card {
+      .first-section {
+        #avatar {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
