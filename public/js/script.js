@@ -1,5 +1,5 @@
-async function queryUser(){
-    let username = document.getElementById('username').value
+async function queryUser(username){
+   
     if(username == '' || username == null){
         return; //if the input has no text, method stops executing
     } 
@@ -91,8 +91,14 @@ function createWebAddress(data){
 }
 
 // bootstraping click and keypress listeners
-document.getElementById('search-btn').addEventListener('click',queryUser)
+document.getElementById('search-btn').addEventListener('click',function(){
+    let username = document.getElementById('username').value
+    queryUser(username)
+})
 
 document.getElementById('username').addEventListener('keypress',e=>{
-    if(e.key === 'Enter') queryUser();
+    let username = document.getElementById('username').value
+    if(e.key === 'Enter') queryUser(username);
 })
+
+queryUser('octocat')

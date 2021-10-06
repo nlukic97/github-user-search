@@ -1,3 +1,5 @@
+@import 'partials/base';
+@import 'partials/dark_theme';
 @import 'partials/variables';
 @import 'partials/mixins';
 
@@ -7,53 +9,24 @@
 }
 
 body {
-    background-color: whitesmoke; //add light color
+    background-color: #F6F8FF; //add light color
     color:black;
     font-family: 'Space Mono', monospace;
-    
-    &.dark {
-        background-color: var(--background-body-dark);
-        color: var(--text-primary-dark);
-
-        .container {
-            // Toggle button settings
-            .top-banner .button-box #theme-btn {        
-                #theme-label {    
-                    color: #fff;    
-                    &::before{
-                        content:'Light';
-                    }
-                }
-
-                #moon-icon {
-                    display: none;
-                }
-
-                #light-bulb-icon {
-                    display: block;
-                }
-            }
-
-            
-            .search-container, .card {
-                background-color: var(--background-card-dark);
-            }
-
-            .card {
-                .card-right {
-                    .numbers-container {
-                        background-color:var(--background-body-dark);
-                    }
-                }
-            }
-        }
-    }
 }
 
 .container {
     width: 50%;
     margin: 0 auto;
     // border: 1px solid red;
+
+    a {
+        text-decoration: none;
+        color: #000;
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     .top-banner {
         display: flex;
@@ -98,7 +71,7 @@ body {
     }
 
     .search-container, .card {
-        background-color: orange; //add light default
+        background-color: #FEFEFE; //add light default
         margin: 10px 0;
     }
 
@@ -106,25 +79,35 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-left: 32px;
 
         #search-icon {
-            // display: subgrid;
         }
 
         input {
             // display: inline-block;
             height: 100%;
             padding: 0.5rem;
-            width: 80%;
+            width: 70%;
             font-family: 'Space Mono', monospace;
+            background: none;
+            border: none;
+            color:#fff;
+            box-shadow: none;
+
+            &:focus {
+                border: none;
+            }
         }
 
         #search-btn {
             font-family: 'Space Mono', monospace;
+            font-size: 16px;
+            box-sizing: border-box;
             background-color: #0079FF;
             border: none;
             border-radius: 10px; //not sure about this
-            padding: 0.5rem 1rem;
+            padding: 13px 24px;
             color: #fff;
         }
     }
@@ -175,7 +158,7 @@ body {
 
             .numbers-container {
                 display: flex;
-                background-color:magenta; //add light default
+                background-color:#F6F8FF; //add light default
 
                 .number-item {
                     flex:1;
@@ -224,14 +207,5 @@ body {
                 }
             }
         }
-    }
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-
-    &:hover {
-        text-decoration: underline;
     }
 }

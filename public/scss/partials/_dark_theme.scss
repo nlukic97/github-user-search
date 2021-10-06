@@ -1,0 +1,43 @@
+body {
+    &.dark {
+        background-color: var(--background-body-dark);
+        color: var(--text-primary-dark);
+
+        a {
+            color:#fff;
+        }
+
+        .container {
+            // Toggle button settings
+            .top-banner .button-box #theme-btn {        
+                #theme-label {    
+                    color: #fff;    
+                    &::before{
+                        content:'Light';
+                    }
+                }
+
+                #moon-icon {
+                    display: none;
+                }
+
+                #light-bulb-icon {
+                    display: block;
+                }
+            }
+
+            
+            .search-container, .card {
+                background-color: var(--background-card-dark);
+            }
+
+            .card {
+                .card-right {
+                    .numbers-container {
+                        background-color:var(--background-body-dark);
+                    }
+                }
+            }
+        }
+    }
+}
