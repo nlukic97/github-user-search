@@ -17,6 +17,18 @@ body.dark {
   background-color: var(--background-body-dark);
   color: var(--text-primary-dark);
 }
+body.dark .container .top-banner .button-box #theme-btn #theme-label {
+  color: #fff;
+}
+body.dark .container .top-banner .button-box #theme-btn #theme-label::before {
+  content: "Light";
+}
+body.dark .container .top-banner .button-box #theme-btn #moon-icon {
+  display: none;
+}
+body.dark .container .top-banner .button-box #theme-btn #light-bulb-icon {
+  display: block;
+}
 body.dark .container .search-container, body.dark .container .card {
   background-color: var(--background-card-dark);
 }
@@ -31,6 +43,30 @@ body.dark .container .card .card-right .numbers-container {
 .container .top-banner {
   display: flex;
   justify-content: space-between;
+}
+.container .top-banner .button-box #theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 78px;
+  background: none;
+  border: none;
+}
+.container .top-banner .button-box #theme-btn #theme-label {
+  text-transform: uppercase;
+  padding-left: 2px;
+}
+.container .top-banner .button-box #theme-btn #theme-label::before {
+  content: "Dark";
+}
+.container .top-banner .button-box #theme-btn:hover {
+  cursor: pointer;
+}
+.container .top-banner .button-box #theme-btn #moon-icon {
+  display: block;
+}
+.container .top-banner .button-box #theme-btn #light-bulb-icon {
+  display: none;
 }
 .container .search-container, .container .card {
   background-color: orange;

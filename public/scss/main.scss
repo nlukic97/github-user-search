@@ -9,11 +9,31 @@
 body {
     background-color: whitesmoke; //add light color
     color:black;
+    
     &.dark {
         background-color: var(--background-body-dark);
         color: var(--text-primary-dark);
 
         .container {
+            // Toggle button settings
+            .top-banner .button-box #theme-btn {        
+                #theme-label {    
+                    color: #fff;    
+                    &::before{
+                        content:'Light';
+                    }
+                }
+
+                #moon-icon {
+                    display: none;
+                }
+
+                #light-bulb-icon {
+                    display: block;
+                }
+            }
+
+            
             .search-container, .card {
                 background-color: var(--background-card-dark);
             }
@@ -37,6 +57,42 @@ body {
     .top-banner {
         display: flex;
         justify-content: space-between;
+
+        #logo {
+
+        }
+
+        .button-box {
+            #theme-btn {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 78px;
+                background: none;
+                border: none;
+
+                #theme-label {
+                    text-transform: uppercase;
+                    padding-left: 2px;
+
+                    &::before{
+                        content:'Dark';
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                #moon-icon {
+                    display: block;
+                }
+
+                #light-bulb-icon {
+                    display: none;
+                }
+            }
+        }
     }
 
     .search-container, .card {
