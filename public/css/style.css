@@ -12,6 +12,7 @@
 body {
   background-color: whitesmoke;
   color: black;
+  font-family: "Space Mono", monospace;
 }
 body.dark {
   background-color: var(--background-body-dark);
@@ -45,6 +46,7 @@ body.dark .container .card .card-right .numbers-container {
   justify-content: space-between;
 }
 .container .top-banner .button-box #theme-btn {
+  font-family: "Space Mono", monospace;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,6 +83,15 @@ body.dark .container .card .card-right .numbers-container {
   height: 100%;
   padding: 0.5rem;
   width: 80%;
+  font-family: "Space Mono", monospace;
+}
+.container .search-container #search-btn {
+  font-family: "Space Mono", monospace;
+  background-color: #0079FF;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: #fff;
 }
 .container .card {
   display: flex;
@@ -96,6 +107,9 @@ body.dark .container .card .card-right .numbers-container {
   justify-content: space-between;
   align-items: center;
   flex: 1;
+}
+.container .card .card-right .card-body .login-container #login {
+  color: #0079FF;
 }
 .container .card .card-right .card-body .login-container .error-message {
   display: none;

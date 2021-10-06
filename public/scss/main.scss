@@ -9,6 +9,7 @@
 body {
     background-color: whitesmoke; //add light color
     color:black;
+    font-family: 'Space Mono', monospace;
     
     &.dark {
         background-color: var(--background-body-dark);
@@ -64,6 +65,7 @@ body {
 
         .button-box {
             #theme-btn {
+                font-family: 'Space Mono', monospace;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -104,6 +106,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         #search-icon {
             // display: subgrid;
         }
@@ -113,6 +116,16 @@ body {
             height: 100%;
             padding: 0.5rem;
             width: 80%;
+            font-family: 'Space Mono', monospace;
+        }
+
+        #search-btn {
+            font-family: 'Space Mono', monospace;
+            background-color: #0079FF;
+            border: none;
+            border-radius: 10px; //not sure about this
+            padding: 0.5rem 1rem;
+            color: #fff;
         }
     }
 
@@ -140,6 +153,9 @@ body {
                 }
 
                 .login-container {
+                    #login {
+                        color: #0079FF;
+                    }
                     .error-message {
                         display: none;
                     }
