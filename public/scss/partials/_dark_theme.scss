@@ -8,7 +8,6 @@ body {
         }
 
         .container {
-            // Toggle button settings
             .top-banner .button-box #theme-btn {        
                 #theme-label {    
                     color: #fff;    
@@ -39,8 +38,29 @@ body {
 
             .card {
                 .card-right {
+                    .card-body {
+                        .name-date {
+                            #join-date {
+                                color: #fff;
+                            }
+                        }
+                    }
                     .numbers-container {
                         background-color:var(--background-body-dark);
+
+                        .number-item {
+                            .title {
+                                color: #fff;
+                                font-size: 13px;
+                            }
+        
+                            .number {
+                                color: #fff;
+                                font-size: 22px;
+                                font-weight: 700;
+        
+                            }
+                        }
                     }
                 }
             }

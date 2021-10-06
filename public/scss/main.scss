@@ -92,7 +92,16 @@ body {
             background-size: 21px 21px;
             padding: 0.5rem 0.5rem 0.5rem 77px;
             border: none;
-            color:#000;
+            color:#222731;
+            line-height: 25px;
+            outline: none;
+
+            &::placeholder,
+            &::-webkit-input-placeholder {
+                font-weight: 700;
+                border: none;
+                color:#4B6A9B;
+            }
 
             &:focus {
                 border: none;
@@ -132,11 +141,17 @@ body {
                     justify-content: space-between;
                     align-items: center;
                     flex: 1;
+                    
+                    #join-date {
+                        color: #697C9A;
+                        font-size: 15px;
+                    }
                 }
 
                 .login-container {
                     #login {
                         color: #0079FF;
+                        font-size: 16px;
                     }
                     .error-message {
                         display: none;
@@ -152,18 +167,36 @@ body {
                         }
                     }
                 }
+
+                #bio {
+                    font-size: 15px;
+                    color: orange;
+                }
     
             }
 
             .numbers-container {
                 display: flex;
                 background-color:#F6F8FF; //add light default
+                border-radius: 10px;
+                padding: 15px 30px;
 
                 .number-item {
                     flex:1;
-
-                    span {
+                    .title, .number {
                         display: block;
+                    }
+
+                    .title {
+                        color: #4B6A9B;
+                        font-size: 13px;
+                    }
+
+                    .number {
+                        color: #2B3442;
+                        font-size: 22px;
+                        font-weight: 700;
+
                     }
                 }
             }
@@ -171,7 +204,7 @@ body {
             .contact-container {
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
-
+                font-size: 15px;
                 .location-container, .twitter-container, .blog-container, .company-container {
 
                     .error-message {
