@@ -20,7 +20,8 @@ body {
 }
 
 .container {
-    width: 50%;
+    max-width: 730px;
+    width: 70%;
     margin: 0 auto;
     // border: 1px solid red;
 
@@ -36,13 +37,16 @@ body {
     .top-banner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
 
         #logo {
-
+            font-size: 26px;
         }
 
         .button-box {
             #theme-btn {
+                color:#697C9A;
                 font-family: 'Space Mono', monospace;
                 display: flex;
                 align-items: center;
@@ -54,6 +58,9 @@ body {
                 #theme-label {
                     text-transform: uppercase;
                     padding-left: 2px;
+                    font-weight: 700;
+                    letter-spacing: 2.5px;
+                    font-size: 13px;
 
                     &::before{
                         content:'Dark';
@@ -96,6 +103,7 @@ body {
         input {
             flex:1;
             font-family: 'Space Mono', monospace;
+            font-size: 18px;
             background: url('../assets/icon-search.svg') no-repeat center left 32px/contain;
             background-size: 21px 21px;
             padding: 0.5rem 0.5rem 0.5rem 77px;
@@ -130,26 +138,35 @@ body {
 
     .card {
         display: flex;
+        justify-content: space-between;
         border-radius: 10px;
+        padding: 45px 48px;
         
         .card-left {
-            // flex-basis:100%; //do i need it
+            // border: 1px solid orange;
+            flex: 1;
+            width: 117px;
+            #avatar {
+                // width: 100%;
+                
+            }
             img {
                 border-radius: 50%;
             }
         }
         
         .card-right {
-            flex-basis:100%;
 
-            .card-body {
-                // border: 1px solid orange;
-    
+            .card-body {    
                 .name-date {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     flex: 1;
+
+                    #name {
+                        color:#2B3442;
+                    }
                     
                     #join-date {
                         color: #697C9A;
@@ -193,6 +210,7 @@ body {
                 background-color:#F6F8FF; //add light default
                 border-radius: 10px;
                 padding: 15px 30px;
+                margin: 30px 0;
 
                 .number-item {
                     flex:1;
@@ -216,10 +234,10 @@ body {
 
             .contact-container {
                 display: grid;
+                gap: 20px;
                 grid-template-columns: repeat(2,1fr);
                 font-size: 15px;
                 .location-container, .twitter-container, .blog-container, .company-container {
-
                     .error-message {
                         display: none;
                     }
@@ -233,22 +251,6 @@ body {
                             display: inline;
                         }
                     }
-
-                    .location-icon {
-                        // filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);;
-                    }
-                }
-
-                .twitter-icon {
-
-                }
-
-                .blog-icon {
-
-                }
-
-                .company-icon {
-
                 }
             }
         }

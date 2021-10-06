@@ -30,6 +30,9 @@ body.dark .container .search-container, body.dark .container .card {
 body.dark .container .search-container input {
   color: #fff;
 }
+body.dark .container .card .card-right .card-body .name-date #name {
+  color: #fff;
+}
 body.dark .container .card .card-right .card-body .name-date #join-date {
   color: #fff;
 }
@@ -70,7 +73,8 @@ body .boxshadow {
 }
 
 .container {
-  width: 50%;
+  max-width: 730px;
+  width: 70%;
   margin: 0 auto;
 }
 .container a {
@@ -83,8 +87,14 @@ body .boxshadow {
 .container .top-banner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+.container .top-banner #logo {
+  font-size: 26px;
 }
 .container .top-banner .button-box #theme-btn {
+  color: #697C9A;
   font-family: "Space Mono", monospace;
   display: flex;
   align-items: center;
@@ -96,6 +106,9 @@ body .boxshadow {
 .container .top-banner .button-box #theme-btn #theme-label {
   text-transform: uppercase;
   padding-left: 2px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  font-size: 13px;
 }
 .container .top-banner .button-box #theme-btn #theme-label::before {
   content: "Dark";
@@ -124,6 +137,7 @@ body .boxshadow {
 .container .search-container input {
   flex: 1;
   font-family: "Space Mono", monospace;
+  font-size: 18px;
   background: url("../assets/icon-search.svg") no-repeat center left 32px/contain;
   background-size: 21px 21px;
   padding: 0.5rem 0.5rem 0.5rem 77px;
@@ -152,19 +166,25 @@ body .boxshadow {
 }
 .container .card {
   display: flex;
+  justify-content: space-between;
   border-radius: 10px;
+  padding: 45px 48px;
+}
+.container .card .card-left {
+  flex: 1;
+  width: 117px;
 }
 .container .card .card-left img {
   border-radius: 50%;
-}
-.container .card .card-right {
-  flex-basis: 100%;
 }
 .container .card .card-right .card-body .name-date {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 1;
+}
+.container .card .card-right .card-body .name-date #name {
+  color: #2B3442;
 }
 .container .card .card-right .card-body .name-date #join-date {
   color: #697C9A;
@@ -195,6 +215,7 @@ body .boxshadow {
   background-color: #F6F8FF;
   border-radius: 10px;
   padding: 15px 30px;
+  margin: 30px 0;
 }
 .container .card .card-right .numbers-container .number-item {
   flex: 1;
@@ -213,6 +234,7 @@ body .boxshadow {
 }
 .container .card .card-right .contact-container {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   font-size: 15px;
 }
