@@ -79,21 +79,20 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: 32px;
-
-        #search-icon {
-        }
-
+        
+        // #search-icon {
+            //     // flex: 1;
+            //     // padding-left: 32px;
+        // }
+        
         input {
-            // display: inline-block;
-            height: 100%;
-            padding: 0.5rem;
-            width: 70%;
+            flex:1;
             font-family: 'Space Mono', monospace;
-            background: none;
+            background: url('../assets/icon-search.svg') no-repeat center left 32px/contain;
+            background-size: 21px 21px;
+            padding: 0.5rem 0.5rem 0.5rem 77px;
             border: none;
-            color:#fff;
-            box-shadow: none;
+            color:#000;
 
             &:focus {
                 border: none;

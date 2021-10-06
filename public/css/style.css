@@ -24,6 +24,9 @@ body.dark .container .top-banner .button-box #theme-btn #light-bulb-icon {
 body.dark .container .search-container, body.dark .container .card {
   background-color: var(--background-card-dark);
 }
+body.dark .container .search-container input {
+  color: #fff;
+}
 body.dark .container .card .card-right .numbers-container {
   background-color: var(--background-body-dark);
 }
@@ -93,17 +96,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 32px;
 }
 .container .search-container input {
-  height: 100%;
-  padding: 0.5rem;
-  width: 70%;
+  flex: 1;
   font-family: "Space Mono", monospace;
-  background: none;
+  background: url("../assets/icon-search.svg") no-repeat center left 32px/contain;
+  background-size: 21px 21px;
+  padding: 0.5rem 0.5rem 0.5rem 77px;
   border: none;
-  color: #fff;
-  box-shadow: none;
+  color: #000;
 }
 .container .search-container input:focus {
   border: none;

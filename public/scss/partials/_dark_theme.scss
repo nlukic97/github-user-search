@@ -31,6 +31,12 @@ body {
                 background-color: var(--background-card-dark);
             }
 
+            .search-container {
+                input {
+                    color: #fff;
+                }
+            }
+
             .card {
                 .card-right {
                     .numbers-container {
