@@ -1,7 +1,7 @@
 @media screen and (max-width:900px) {
   .container {
     .card {
-      .first-section {
+      .first-content {
         .card-body {
           flex-direction: column;
           justify-content: flex-start;
@@ -9,8 +9,8 @@
       }
 
       .second-content {
-        margin-left: unset;
-        padding-left: unset;
+        margin-left: 0;
+        padding-left: 0;
       }
     }
   }
@@ -20,7 +20,7 @@
 @media screen and (max-width:600px) {
   .container {
     .card {
-      .first-section {
+      .first-content {
         #avatar {
           width: 70px;
           height: 70px;

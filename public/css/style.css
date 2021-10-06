@@ -118,51 +118,51 @@ body .boxshadow {
   border-radius: 10px;
   padding: 45px 48px;
 }
-.container .card .first-section {
+.container .card .first-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.container .card .first-section #avatar {
+.container .card .first-content #avatar {
   border-radius: 50%;
   width: 117px;
   height: 117px;
   margin-right: 35px;
 }
-.container .card .first-section .card-body {
+.container .card .first-content .card-body {
   width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.container .card .first-section .card-body .basic-info {
+.container .card .first-content .card-body .basic-info {
   flex: 1;
 }
-.container .card .first-section .card-body .basic-info #name {
+.container .card .first-content .card-body .basic-info #name {
   color: #2B3442;
   padding-right: 20px;
 }
-.container .card .first-section .card-body .basic-info .login-container #login {
+.container .card .first-content .card-body .basic-info .login-container #login {
   color: #0079FF;
   font-size: 16px;
 }
-.container .card .first-section .card-body .basic-info .login-container .error-message {
+.container .card .first-content .card-body .basic-info .login-container .error-message {
   display: none;
 }
-.container .card .first-section .card-body .basic-info .login-container.unavailable a {
+.container .card .first-content .card-body .basic-info .login-container.unavailable a {
   display: none;
 }
-.container .card .first-section .card-body .basic-info .login-container.unavailable .error-message {
+.container .card .first-content .card-body .basic-info .login-container.unavailable .error-message {
   display: block;
 }
-.container .card .first-section .card-body #join-date {
+.container .card .first-content .card-body #join-date {
   flex: 1;
   color: #697C9A;
   font-size: 15px;
   line-height: 36px;
 }
 .container .card .second-content {
-  margin-left: calc(20% + 35px);
+  margin-left: 152px;
 }
 .container .card .second-content #bio {
   font-size: 15px;
@@ -260,17 +260,17 @@ body.dark .container .card .second-content .numbers-container .number-item .numb
 }
 
 @media screen and (max-width: 900px) {
-  .container .card .first-section .card-body {
+  .container .card .first-content .card-body {
     flex-direction: column;
     justify-content: flex-start;
   }
   .container .card .second-content {
-    margin-left: unset;
-    padding-left: unset;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 600px) {
-  .container .card .first-section #avatar {
+  .container .card .first-content #avatar {
     width: 70px;
     height: 70px;
   }

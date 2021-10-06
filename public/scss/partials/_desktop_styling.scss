@@ -123,7 +123,7 @@ body {
       border-radius: 10px;
       padding: 45px 48px;
       
-      .first-section {
+      .first-content {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -188,8 +188,7 @@ body {
       
       // ---------- 2nd content ---------- 
       .second-content {
-          margin-left: calc(20% + 35px); //problematic
-          // padding-left: 35px;  
+          margin-left: 152px; 
           
           #bio {
               font-size: 15px;
