@@ -43,7 +43,7 @@ async function queryUser(){
     updateElementAttr('#login','href',(url)? url : ''); //hide the link
     updateElementAttr('#login','innerText',(login)? '@'+login : updateClass('.login-container','add'));
     
-    updateElementAttr('#join-date','innerText',(created_at)? getJoinDate(created_at) : 'Unknown');
+    updateElementAttr('#join-date','innerText',(created_at)? 'Joined ' + getJoinDate(created_at) : 'Unknown');
     updateElementAttr('#bio','innerText',(bio)? bio : 'This profile has no bio');
 
     // repos, following, and followers
