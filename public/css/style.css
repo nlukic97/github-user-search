@@ -100,6 +100,9 @@ body .boxshadow {
   background: none;
   border: none;
 }
+.container .top-banner .button-box #theme-btn:hover {
+  cursor: pointer;
+}
 .container .top-banner .button-box #theme-btn #theme-label {
   text-transform: uppercase;
   padding-left: 2px;
@@ -109,9 +112,6 @@ body .boxshadow {
 }
 .container .top-banner .button-box #theme-btn #theme-label::before {
   content: "Dark";
-}
-.container .top-banner .button-box #theme-btn:hover {
-  cursor: pointer;
 }
 .container .top-banner .button-box #theme-btn #moon-icon {
   display: block;
@@ -172,7 +172,8 @@ body .boxshadow {
   width: 117px;
 }
 .container .card .card-left #avatar {
-  width: 100%;
+  width: 117px;
+  height: 117px;
 }
 .container .card .card-left img {
   border-radius: 50%;
