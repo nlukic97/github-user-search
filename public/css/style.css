@@ -55,6 +55,7 @@ body .boxshadow {
 }
 .container .top-banner .button-box #theme-btn:hover {
   cursor: pointer;
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(177deg) brightness(40%) contrast(93%);
 }
 .container .top-banner .button-box #theme-btn #theme-label {
   text-transform: uppercase;

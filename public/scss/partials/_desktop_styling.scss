@@ -43,10 +43,9 @@ body {
                 width: 78px;
                 background: none;
                 border: none;
-
                 &:hover {
                     cursor: pointer;
-                    // filter:invert(78%) sepia(13%) saturate(900%) hue-rotate(187deg) brightness(226%) contrast(120%)
+                    filter:invert(0%) sepia(0%) saturate(0%) hue-rotate(177deg) brightness(40%) contrast(93%);
                 }
                 
                 #theme-label {
