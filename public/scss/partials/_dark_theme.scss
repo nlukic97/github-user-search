@@ -1,7 +1,7 @@
 body {
     &.dark {
-        background-color: var(--background-body-dark);
-        color: var(--text-primary-dark);
+        background-color: #141D2F;
+        color: #fff;
         
         .boxshadow {
             box-shadow: none;
@@ -34,7 +34,7 @@ body {
             
             
             .search-container, .card {
-                background-color: var(--background-card-dark);
+                background-color: #1E2A47;
             }
             
             .search-container {
@@ -66,7 +66,7 @@ body {
                     }
 
                     .numbers-container {
-                        background-color:var(--background-body-dark);
+                        background-color:#141D2F;
                         
                         .number-item {
                             .title {

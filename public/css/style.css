@@ -7,12 +7,6 @@
   padding: 0;
 }
 
-:root {
-  --background-body-dark: #141D2F;
-  --background-card-dark: #1E2A47;
-  --text-primary-dark:#fff;
-}
-
 body {
   background-color: #F6F8FF;
   color: black;
@@ -246,8 +240,8 @@ body .boxshadow {
 }
 
 body.dark {
-  background-color: var(--background-body-dark);
-  color: var(--text-primary-dark);
+  background-color: #141D2F;
+  color: #fff;
 }
 body.dark .boxshadow {
   box-shadow: none;
@@ -271,7 +265,7 @@ body.dark .container .top-banner .button-box #theme-btn #light-bulb-icon {
   display: block;
 }
 body.dark .container .search-container, body.dark .container .card {
-  background-color: var(--background-card-dark);
+  background-color: #1E2A47;
 }
 body.dark .container .search-container input {
   color: #fff;
@@ -289,7 +283,7 @@ body.dark .container .card .second-content #bio {
   color: #fff;
 }
 body.dark .container .card .second-content .numbers-container {
-  background-color: var(--background-body-dark);
+  background-color: #141D2F;
 }
 body.dark .container .card .second-content .numbers-container .number-item .title {
   color: #fff;
