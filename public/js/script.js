@@ -8,7 +8,10 @@ async function queryUser(username){
         .then(response => (response.status != 200) ? false : response.json())
         // .then(res=> res); //maybe don't need this
 
-    if(data === false) return //If the api does not return a status of 200, end code execution from this line
+    if(data === false) {
+        updateClass('.search-container','add',null);
+        return //If the api does not return a status of 200, end code execution from this line
+    }
     
     let {
         avatar_url:avatar, 
@@ -27,7 +30,8 @@ async function queryUser(username){
     } 
     = data;
 
-    //remove classes that decreas the text opacity for previous results that were not available
+    //remove classes that decreas the text opacity for previous results that were not available,
+    //and that show the error message 
     document.querySelectorAll('.unavailable').forEach(e=>{
         e.classList.remove('unavailable')
     })
@@ -99,4 +103,5 @@ document.getElementById('username').addEventListener('keypress',e=>{
     if(e.key === 'Enter') queryUser(username);
 })
 
-queryUser('octocat')
+// queryUser('octocat')
+queryUser('@#')

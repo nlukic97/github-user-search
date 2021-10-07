@@ -95,6 +95,7 @@ body .boxshadow {
   color: #222731;
   line-height: 25px;
   outline: none;
+  min-width: 0;
 }
 .container .search-container input::placeholder, .container .search-container input::-webkit-input-placeholder {
   font-weight: 700;
@@ -103,6 +104,16 @@ body .boxshadow {
 }
 .container .search-container input:focus {
   border: none;
+}
+.container .search-container .error-message {
+  display: none;
+  font-size: 15px;
+  color: #F74646;
+  font-weight: bold;
+  padding-right: 24px;
+}
+.container .search-container.unavailable .error-message {
+  display: block;
 }
 .container .search-container #search-btn {
   font-family: "Space Mono", monospace;
@@ -195,7 +206,7 @@ body .boxshadow {
 }
 .container .card .second-content .contact-container {
   display: grid;
-  gap: 20px;
+  gap: 5px;
   grid-template-columns: repeat(2, 1fr);
   font-size: 15px;
 }
@@ -259,7 +270,7 @@ body.dark .container .card .second-content .numbers-container .number-item .numb
   color: #fff;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 956px) {
   .container .card .first-content .card-body {
     flex-direction: column;
     justify-content: flex-start;
