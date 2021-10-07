@@ -43,8 +43,10 @@ body {
                 width: 78px;
                 background: none;
                 border: none;
+
                 &:hover {
                     cursor: pointer;
+                    // filter:invert(78%) sepia(13%) saturate(900%) hue-rotate(187deg) brightness(226%) contrast(120%)
                 }
                 
                 #theme-label {
@@ -53,6 +55,7 @@ body {
                     font-weight: 700;
                     letter-spacing: 2.5px;
                     font-size: 13px;
+
                     &::before{
                         content:'Dark';
                     }
@@ -129,6 +132,16 @@ body {
             border-radius: 10px;
             padding: 13px 24px;
             color: #fff;
+
+            &:hover {
+                background-color: #60ABFF;
+                cursor: pointer;
+            }
+
+            &:active {
+                background-color: #0079FF;
+                // transform: scale(0.95);
+            }
         }
     }
     
@@ -149,10 +162,8 @@ body {
             }
             
             .card-body {  
-                width: 80%;
-                // margin-left: 35px;
-                
-                display: flex; //toggle this to change location of join-date, make it to 'block'
+                width: 80%;                
+                display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
                 
@@ -190,6 +201,7 @@ body {
                     color: #697C9A;
                     font-size: 15px;
                     line-height: 36px; //So that the name and the join date are lined up together
+                    text-align: right;
                 }
                 
             }
@@ -246,8 +258,12 @@ body {
                 grid-template-columns: repeat(2,1fr);
                 font-size: 15px;
                 .location-container, .twitter-container, .blog-container, .company-container {
+                    span {
+                        color: #4B6A9B;
+                    }
                     a {
                         word-break: break-all;
+                        color: #4B6A9B;
                     }
                     .error-message {
                         display: none;

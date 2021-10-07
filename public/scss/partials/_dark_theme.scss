@@ -4,7 +4,6 @@ body {
         color: var(--text-primary-dark);
         
         .boxshadow {
-            // filter: drop-shadow(0px 30px 15px rgba(70, 96, 187,19%));
             box-shadow: none;
         }
         
@@ -13,7 +12,10 @@ body {
         }
         
         .container {
-            .top-banner .button-box #theme-btn {        
+            .top-banner .button-box #theme-btn {
+                &:hover {
+                    filter:invert(78%) sepia(13%) saturate(900%) hue-rotate(187deg) brightness(226%) contrast(120%)
+                }        
                 #theme-label {    
                     color: #fff;    
                     &::before{
@@ -79,6 +81,15 @@ body {
 
                     .contact-container {
                         .location-container, .twitter-container, .blog-container, .company-container {
+                            span {
+                                color: #fff;
+                            }
+
+                            a {
+                                word-break: break-all;
+                                color: #fff;
+                            }
+
                             img {
                                 filter:invert(100%) sepia(100%) saturate(1%) hue-rotate(245deg) brightness(100%) contrast(200%)
                             }
