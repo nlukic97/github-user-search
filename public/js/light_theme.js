@@ -1,6 +1,4 @@
-// localStorage.removeItem('dark-theme') //just for testing 
-
-// Click listener
+// bootstraping event listeners
 let themeBtn = document.getElementById('theme-btn')
 themeBtn.addEventListener('click',function(){
     let savedThemePref = JSON.parse(localStorage.getItem('dark-theme'))
@@ -11,7 +9,7 @@ themeBtn.addEventListener('click',function(){
     localStorage.setItem('dark-theme',!savedThemePref) 
 })
 
-
+// initialization
 init()
 
 /** ----- METHODS -----  */

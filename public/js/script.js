@@ -1,17 +1,31 @@
+// bootstraping event listeners
+document.getElementById('search-btn').addEventListener('click',function(){
+    let username = document.getElementById('username').value
+    queryUser(username)
+})
+
+document.getElementById('username').addEventListener('keypress',e=>{
+    let username = document.getElementById('username').value
+    if(e.key === 'Enter') queryUser(username);
+})
+
+// initialization
+queryUser('octocat')
+
+
+
+
+/** ----- METHODS -----  */
 async function queryUser(username){
-   
     if(username == '' || username == null){
         return; //if the input has no text, method stops executing
     } 
 
     let data = await fetch('https://api.github.com/users/' + username)
         .then(response => (response.status != 200) ? false : response.json())
-        // .then(res=> res); //maybe don't need this
 
     if(data === false) {
-        //  If the api does not return a status of 200, 
-        //  show the error message in search bar
-        //  end code execution from this line
+        //  If the api does not return a status of 200, show the error message in search bar and end code execution from this line
         updateClass('.search-container','add');
         return 
     }
@@ -33,8 +47,7 @@ async function queryUser(username){
     } 
     = data;
 
-    //remove classes that decreas the text opacity for previous results that were not available,
-    //and that show the error message 
+    //remove classes that decreas the text opacity for previous results that were not available and hides the search bar error message
     document.querySelectorAll('.unavailable').forEach(e=>{
         e.classList.remove('unavailable')
     })
@@ -51,7 +64,12 @@ async function queryUser(username){
     // updateElementAttr('#bio','innerText',(bio)? bio : 'This profile has no bio');
     updateElementAttr('#bio','innerText',(bio)? bio : updateClass('#bio','add','This profile has no bio'));
 
-    // repos, following, and followers - differing conditional statement due to the fact that 0 repos, followers, and following cause the condition to return to false, which is not the case
+
+    // repos, following, and followers
+    /** differing conditional statement due to the fact that a user having 
+     * 0 repos, 0 followers, or 0 following causes the condition 
+     * statement to return to false, which is inaccurate 
+     * */
     updateElementAttr('#repos-number','innerText',(repos !== null && followers != undefined)? repos : ''); 
     updateElementAttr('#followers-number','innerText',(followers !== null && followers != undefined)? followers : '');
     updateElementAttr('#following-number','innerText',(following !== null && followers != undefined)? following : '');
@@ -77,16 +95,17 @@ function updateElementAttr(querySelector, attribute, value){
     document.querySelector(querySelector)[attribute] = value //example: item.href=value or item.innerText = value
 }
 
-// action - 'add' or 'remove'
+// action - 'add' or 'remove' the 'unavailable' class (that causes its children elements to change opacity and visibility)
 function updateClass(querySelector,action, returnMessage){
-    document.querySelector(querySelector).classList[action]('unavailable'); //adding this class will toggle the visibility of the a tag and the span tag containing the error message
+    document.querySelector(querySelector).classList[action]('unavailable');
     return returnMessage;
 }
 
 
-/** Some users add 'https://' with their blog url (github.com/daniel), and some don't (github.com/bradtraversy)
-    (which would change the anchor tag href to '/public/[their_blog_url])' 
-    causing an error - this method solves this problem.*/
+/** 
+ * Some users add 'https://' with their blog url (github.com/daniel), and some don't (github.com/bradtraversy)
+ * (which would change the anchor tag href to '/public/[their_blog_url])' 
+ * causing an error - this method solves this problem.*/
 function createWebAddress(data){
     console.log(data);
     if(data.includes('https://') || data.includes('http://')){
@@ -96,16 +115,7 @@ function createWebAddress(data){
     }
 }
 
-// bootstraping click and keypress listeners
-document.getElementById('search-btn').addEventListener('click',function(){
-    let username = document.getElementById('username').value
-    queryUser(username)
-})
 
-document.getElementById('username').addEventListener('keypress',e=>{
-    let username = document.getElementById('username').value
-    if(e.key === 'Enter') queryUser(username);
-})
 
-queryUser('octocat')
-// queryUser('@#')
+
+
