@@ -5,25 +5,131 @@
         .card-body {
           flex-direction: column;
           justify-content: flex-start;
+          
+          #join-date {
+            line-height: unset;
+            padding-top: 4px;
+          }
         }
       }
-
+      
       .second-content {
         margin-left: 0;
         padding-left: 0;
+        
+        #bio {
+          padding-top: 25px;
+        }
       }
     }
   }
 }
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
   .container {
+    width: 80%;
+  }
+  
+}
+
+
+@media screen and (max-width:638px) {
+  .container {
+    width: 90%;
     .card {
       .first-content {
         #avatar {
           width: 70px;
           height: 70px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:535px){
+  .container {
+    .search-container {
+      padding: 7px;
+      
+      input {
+        font-size: 13px;
+        background-position: center left 16px;
+        padding: 0.5rem 0.5rem 0.5rem 45px;
+      }
+      
+      #search-btn {
+        font-size: 14px;
+      }
+    }
+    
+    .card {
+      padding: 30px 24px;
+      .first-content {
+
+        #avatar {
+          margin-right: 20px;
+        }
+        .card-body {
+          .basic-info {
+            #name {
+              font-size: 16px;
+            }
+            
+            .login-container {
+              #login {
+                font-size: 13px;
+              }
+            }
+          }
+          
+          #join-date {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .second-content {
+        #bio {
+          font-size: 13px;
+          padding-top: 33px;
+        }
+
+        .numbers-container {
+          padding: 15px 5px;
+
+          .number-item {
+            text-align: center;
+
+            .title {
+              font-size: 11px;
+            }
+
+            .number {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .contact-container {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+//mobile
+@media screen and (max-width:480px) {
+  .container {    
+    .card {
+      .second-content {
+        .contact-container {
+          grid-template-rows: repeat(4,1fr);
+          grid-template-columns: 1fr;
+          gap: 15px;
         }
       }
     }

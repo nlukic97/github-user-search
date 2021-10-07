@@ -25,7 +25,7 @@ body .boxshadow {
 .container {
   max-width: 730px;
   width: 70%;
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 .container a {
   text-decoration: none;
@@ -98,7 +98,6 @@ body .boxshadow {
   min-width: 0;
 }
 .container .search-container input::placeholder, .container .search-container input::-webkit-input-placeholder {
-  font-weight: 700;
   border: none;
   color: #4B6A9B;
 }
@@ -138,7 +137,7 @@ body .boxshadow {
   border-radius: 50%;
   width: 117px;
   height: 117px;
-  margin-right: 35px;
+  margin-right: 40px;
 }
 .container .card .first-content .card-body {
   width: 80%;
@@ -173,11 +172,12 @@ body .boxshadow {
   line-height: 36px;
 }
 .container .card .second-content {
-  margin-left: 152px;
+  margin-left: 157px;
 }
 .container .card .second-content #bio {
   font-size: 15px;
   color: #4B6A9B;
+  line-height: 25px;
 }
 .container .card .second-content #bio.unavailable {
   opacity: 0.75;
@@ -206,12 +206,18 @@ body .boxshadow {
 }
 .container .card .second-content .contact-container {
   display: grid;
-  gap: 5px;
+  gap: 5px 15px;
   grid-template-columns: repeat(2, 1fr);
   font-size: 15px;
 }
+.container .card .second-content .contact-container .location-container a, .container .card .second-content .contact-container .twitter-container a, .container .card .second-content .contact-container .blog-container a, .container .card .second-content .contact-container .company-container a {
+  word-break: break-all;
+}
 .container .card .second-content .contact-container .location-container .error-message, .container .card .second-content .contact-container .twitter-container .error-message, .container .card .second-content .contact-container .blog-container .error-message, .container .card .second-content .contact-container .company-container .error-message {
   display: none;
+}
+.container .card .second-content .contact-container .location-container img, .container .card .second-content .contact-container .twitter-container img, .container .card .second-content .contact-container .blog-container img, .container .card .second-content .contact-container .company-container img {
+  margin-right: 10px;
 }
 .container .card .second-content .contact-container .location-container.unavailable, .container .card .second-content .contact-container .twitter-container.unavailable, .container .card .second-content .contact-container .blog-container.unavailable, .container .card .second-content .contact-container .company-container.unavailable {
   opacity: 0.6;
@@ -221,6 +227,9 @@ body .boxshadow {
 }
 .container .card .second-content .contact-container .location-container.unavailable .error-message, .container .card .second-content .contact-container .twitter-container.unavailable .error-message, .container .card .second-content .contact-container .blog-container.unavailable .error-message, .container .card .second-content .contact-container .company-container.unavailable .error-message {
   display: inline;
+}
+.container .card .second-content .contact-container .location-container img {
+  margin-right: 16px;
 }
 
 body.dark {
@@ -251,6 +260,9 @@ body.dark .container .search-container, body.dark .container .card {
 body.dark .container .search-container input {
   color: #fff;
 }
+body.dark .container .search-container input::placeholder, body.dark .container .search-container input::-webkit-input-placeholder {
+  color: #fff;
+}
 body.dark .container .card .card-body .basic-info #name {
   color: #fff;
 }
@@ -269,21 +281,93 @@ body.dark .container .card .second-content .numbers-container .number-item .titl
 body.dark .container .card .second-content .numbers-container .number-item .number {
   color: #fff;
 }
+body.dark .container .card .second-content .contact-container .location-container img, body.dark .container .card .second-content .contact-container .twitter-container img, body.dark .container .card .second-content .contact-container .blog-container img, body.dark .container .card .second-content .contact-container .company-container img {
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(245deg) brightness(100%) contrast(200%);
+}
 
 @media screen and (max-width: 956px) {
   .container .card .first-content .card-body {
     flex-direction: column;
     justify-content: flex-start;
   }
+  .container .card .first-content .card-body #join-date {
+    line-height: unset;
+    padding-top: 4px;
+  }
   .container .card .second-content {
     margin-left: 0;
     padding-left: 0;
   }
+  .container .card .second-content #bio {
+    padding-top: 25px;
+  }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 638px) {
+  .container {
+    width: 90%;
+  }
   .container .card .first-content #avatar {
     width: 70px;
     height: 70px;
+  }
+}
+@media screen and (max-width: 535px) {
+  .container .search-container {
+    padding: 7px;
+  }
+  .container .search-container input {
+    font-size: 13px;
+    background-position: center left 16px;
+    padding: 0.5rem 0.5rem 0.5rem 45px;
+  }
+  .container .search-container #search-btn {
+    font-size: 14px;
+  }
+  .container .card {
+    padding: 30px 24px;
+  }
+  .container .card .first-content #avatar {
+    margin-right: 20px;
+  }
+  .container .card .first-content .card-body .basic-info #name {
+    font-size: 16px;
+  }
+  .container .card .first-content .card-body .basic-info .login-container #login {
+    font-size: 13px;
+  }
+  .container .card .first-content .card-body #join-date {
+    font-size: 13px;
+  }
+  .container .card .second-content #bio {
+    font-size: 13px;
+    padding-top: 33px;
+  }
+  .container .card .second-content .numbers-container {
+    padding: 15px 5px;
+  }
+  .container .card .second-content .numbers-container .number-item {
+    text-align: center;
+  }
+  .container .card .second-content .numbers-container .number-item .title {
+    font-size: 11px;
+  }
+  .container .card .second-content .numbers-container .number-item .number {
+    font-size: 16px;
+  }
+  .container .card .second-content .contact-container {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container .card .second-content .contact-container {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
 

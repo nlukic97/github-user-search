@@ -12,8 +12,7 @@ body {
 .container {
     max-width: 730px;
     width: 70%;
-    margin: 0 auto;
-    // border: 1px solid red;
+    margin: 100px auto 0;
     
     a {
         text-decoration: none;
@@ -98,7 +97,6 @@ body {
             
             &::placeholder,
             &::-webkit-input-placeholder {
-                font-weight: 700;
                 border: none;
                 color:#4B6A9B;
             }
@@ -147,7 +145,7 @@ body {
                 border-radius: 50%;
                 width: 117px;
                 height: 117px;
-                margin-right: 35px;
+                margin-right: 40px;
             }
             
             .card-body {  
@@ -203,11 +201,12 @@ body {
         
         // ---------- 2nd content ---------- 
         .second-content {
-            margin-left: 152px; 
+            margin-left: 157px; 
             
             #bio {
                 font-size: 15px;
                 color: #4B6A9B;
+                line-height: 25px;
                 
                 &.unavailable {
                     opacity: 0.75;
@@ -243,12 +242,19 @@ body {
             
             .contact-container {
                 display: grid;
-                gap: 5px;
+                gap: 5px 15px;
                 grid-template-columns: repeat(2,1fr);
                 font-size: 15px;
                 .location-container, .twitter-container, .blog-container, .company-container {
+                    a {
+                        word-break: break-all;
+                    }
                     .error-message {
                         display: none;
+                    }
+
+                    img {
+                        margin-right: 10px;
                     }
                     
                     &.unavailable { //This will hide the link and show the error message instead
@@ -259,6 +265,12 @@ body {
                         .error-message {
                             display: inline;
                         }
+                    }
+                }
+
+                .location-container {
+                    img {
+                        margin-right: 16px;
                     }
                 }
             }
