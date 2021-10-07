@@ -9,8 +9,11 @@ async function queryUser(username){
         // .then(res=> res); //maybe don't need this
 
     if(data === false) {
-        updateClass('.search-container','add',null);
-        return //If the api does not return a status of 200, end code execution from this line
+        //  If the api does not return a status of 200, 
+        //  show the error message in search bar
+        //  end code execution from this line
+        updateClass('.search-container','add');
+        return 
     }
     
     let {
@@ -74,6 +77,7 @@ function updateElementAttr(querySelector, attribute, value){
     document.querySelector(querySelector)[attribute] = value //example: item.href=value or item.innerText = value
 }
 
+// action - 'add' or 'remove'
 function updateClass(querySelector,action, returnMessage){
     document.querySelector(querySelector).classList[action]('unavailable'); //adding this class will toggle the visibility of the a tag and the span tag containing the error message
     return returnMessage;
@@ -103,5 +107,5 @@ document.getElementById('username').addEventListener('keypress',e=>{
     if(e.key === 'Enter') queryUser(username);
 })
 
-// queryUser('octocat')
-queryUser('@#')
+queryUser('octocat')
+// queryUser('@#')
