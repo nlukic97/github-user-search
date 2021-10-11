@@ -11,6 +11,7 @@ document.getElementById('username').addEventListener('keypress',e=>{
 
 // initialization
 queryUser('octocat')
+// queryUser('nlukic97')
 
 
 
@@ -84,6 +85,7 @@ async function queryUser(username){
     updateElementAttr('#blog','innerText',(blog)? blog : updateClass('.blog-container','add','Not available'));
 
     updateElementAttr('#company','innerText',(company)? company : updateClass('.company-container','add','Not available'));
+    updateElementAttr('#company','href',(company)? 'https://www.github.com/'+ company.replace('@','') : updateClass('.company-container','add','Not available'));
 }
 
 function getJoinDate(created_at){
